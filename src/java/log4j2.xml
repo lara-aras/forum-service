@@ -1,0 +1,17 @@
+<Configuration status='off'>
+    <Properties>
+        <Property name='logFilePath'>logs/Forum.log</Property>
+    </Properties>
+    <Appenders>
+        <File name='File' fileName='${logFilePath}'>
+            <PatternLayout>
+                <Pattern>%d %-5p %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level='info'>
+            <AppenderRef ref='File'/>
+        </Root>
+    </Loggers>
+</Configuration>
